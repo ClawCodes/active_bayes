@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-"""Render every synthetic and real-world benchmark used in the report.
 
-Outputs (by default) are saved in figures/datasets/.  The script deliberately
-uses every sample only for visualization; create the train/pool/test split in
-the active-learning experiment, not here.
+"""
 
 Install dependencies:
     pip install numpy pandas matplotlib scikit-learn ucimlrepo torch torchvision
