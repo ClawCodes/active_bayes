@@ -2,6 +2,9 @@
 .python-version
 .idea/
 .vscode/
+proposal/
+src/data/
+src/figures/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
