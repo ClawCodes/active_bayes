@@ -1,0 +1,14 @@
+model: mdn
+seed: 0
+data:
+  name: concrete
+  test_fraction: 0.2
+  labels:
+    strategy: random
+    n_labeled: 200
+mdn:
+  n_components: 3
+  hidden_dims: [64, 64]
+  lr: 0.001
+  epochs: 2000
+  weight_decay: 0.0001

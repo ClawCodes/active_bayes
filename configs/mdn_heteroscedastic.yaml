@@ -1,0 +1,13 @@
+model: mdn
+seed: 0
+data:
+  name: heteroscedastic
+  n_samples: 2000
+  test_fraction: 0.2
+  labels:
+    strategy: all
+mdn:
+  n_components: 3
+  hidden_dims: [64, 64]
+  lr: 0.001
+  epochs: 2000

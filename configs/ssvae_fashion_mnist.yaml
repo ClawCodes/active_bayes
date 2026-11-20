@@ -1,0 +1,16 @@
+model: ssvae
+seed: 0
+data:
+  name: fashion_mnist
+  labels:
+    strategy: random
+    n_labeled: 1000
+ssvae:
+  latent_dim: 32
+  hidden_dims: [512, 256]
+  likelihood: bernoulli
+  lr: 0.001
+  epochs: 30
+  labeled_batch_size: 64
+  unlabeled_batch_size: 256
+  classification_weight: 1.0

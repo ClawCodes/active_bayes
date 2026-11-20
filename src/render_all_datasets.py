@@ -192,8 +192,8 @@ def render_tabular_regression(
     save_figure(fig, output_path)
 
 
-def load_fashion_mnist(data_dir: Path) -> tuple[np.ndarray, np.ndarray]:
-    """Download/load Fashion-MNIST's training split with torchvision."""
+def load_fashion_mnist(data_dir: Path, train: bool = True) -> tuple[np.ndarray, np.ndarray]:
+    """Download/load a Fashion-MNIST split (training by default) with torchvision."""
     try:
         from torchvision.datasets import FashionMNIST
     except ImportError as exc:
@@ -201,7 +201,7 @@ def load_fashion_mnist(data_dir: Path) -> tuple[np.ndarray, np.ndarray]:
             "Install PyTorch and torchvision; see https://pytorch.org/get-started/locally/."
         ) from exc
 
-    dataset = FashionMNIST(root=str(data_dir), train=True, download=True)
+    dataset = FashionMNIST(root=str(data_dir), train=train, download=True)
     return dataset.data.numpy(), dataset.targets.numpy()
 
 
